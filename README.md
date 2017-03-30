@@ -22,7 +22,7 @@ The Nodes are generic, low power, remote telemetry units that can be used for ra
 - 1-Wire sensors with software support SHTx1 Temperature/Humidity sensors 
 - Digital inputs, including flow sensor
 - Exended TTL I/O including software support for TTL Camera, Electric Fence and GPS
-- Signal strength/Battert voltage functions
+- Signal strength/Battery voltage functions
 
 <b>MAIN PROCESSOR and HARDWARE FEATURES</b>
 
@@ -39,11 +39,11 @@ Power management is via our integrated 12v charge circuits and can be from eithe
 - UART0 connected to XBee radios / OR FTDI programming
 - UART1 multiplexed 4 ways to provide support for multiple devices
 - 6pin Headers exposed for  Serial programmers
-- Bootloader supports boot from SPI options
+- Bootloader supports boot from Flash memory
 - 4x Analog input
+- Digital Interrupt/Flow Meter
 - SPI
 - 1-Wire
-- Digital Interrupt/Flow Meter
 
 <b>WIRELESS COMMUNICATIONS and DIGIMESH</b>
 
