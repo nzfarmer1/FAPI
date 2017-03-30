@@ -68,47 +68,47 @@ To conform with a Serial based framework, this protocol has been extended to inc
 
 For example, activate an acctuator we send:
 
-<code>
+<pre>
 [ { bn: 'urn:dev:xbee:0013a20040af7346' },
   { n: 'D0', vb: true } ]
-</code>
+</pre>
 
 To query the state of an accuator we use:
 
-<code>
+<pre>
 [ { bn: 'urn:dev:xbee:0013a20040af7346' },
   { n: 'D0' } ]    (or leave vb:undefined)
-</code>
+</pre>
 
 The n: flag correlated to the Service name.  A full API is being developed.  Here are some additional examples:
 
 - Voltage sensor from End Node
-<code>
+<pre>
 [ { bn: 'urn:dev:xbee:0013a20040af7346' },
   { n: 'A0', v: 10.1 } ]
-</code>
+</pre>
 
 - Positional data in header
-<code>
+<pre>
 [ { bn: 'urn:dev:xbee:0013a20040af7346', pos:[<lon>,<lat>,<alt>], bt:<ms since midnight> }, {...} ],
-</code>
+</pre>
 
-(Note: as our End Nodes do not incorporate a RTC, time is synced via the gateway)
+<i>(Note: as our End Nodes do not incorporate a RTC, time is synced via the gateway)</i>
 
 - Camera image
-<code>
+<pre>
 [ { bn: 'urn:dev:xbee:0013a20040af7346'},
   {n:'CAM', vd:<Buffer 0x....>}]
-</code>
+</pre>
 
 (note, all SenML data is encoded/decoded via Msgpack http://msgpack.org, providing both type and size metadata)
 
 - Firmware information
 
 Request:
-<code>
+<pre>
 [ { bn: 'urn:dev:xbee:0013A20000000000'},{ n:VERS }]
-</code>
+</pre>
 
 Response:
 <pre>
@@ -124,10 +124,10 @@ Response:
 </pre>
 
 Signal Strength
-<code>
+<pre>
 [ { bn: 'urn:dev:xbee:0013a20040af7346'},
   {n:'dB', v:15}]
-</code>
+  </pre>
 
 
 <b>OTA - Over the Air Programming</b>
