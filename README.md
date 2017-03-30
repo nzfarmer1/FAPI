@@ -68,37 +68,50 @@ To conform with a Serial based framework, this protocol has been extended to inc
 
 For example, activate an acctuator we send:
 
+<code>
 [ { bn: 'urn:dev:xbee:0013a20040af7346' },
   { n: 'D0', vb: true } ]
+</code>
 
 To query the state of an accuator we use:
 
+<code>
 [ { bn: 'urn:dev:xbee:0013a20040af7346' },
   { n: 'D0' } ]    (or leave vb:undefined)
+</code>
 
 The n: flag correlated to the Service name.  A full API is being developed.  Here are some additional examples:
 
 - Voltage sensor from End Node
+<code>
 [ { bn: 'urn:dev:xbee:0013a20040af7346' },
   { n: 'A0', v: 10.1 } ]
+</code>
 
 - Positional data in header
+<code>
 [ { bn: 'urn:dev:xbee:0013a20040af7346', pos:[<lon>,<lat>,<alt>], bt:<ms since midnight> }, {...} ],
+</code>
 
 (Note: as our End Nodes do not incorporate a RTC, time is synced via the gateway)
 
 - Camera image
+<code>
 [ { bn: 'urn:dev:xbee:0013a20040af7346'},
   {n:'CAM', vd:<Buffer 0x....>}]
+</code>
 
 (note, all SenML data is encoded/decoded via Msgpack http://msgpack.org, providing both type and size metadata)
 
 - Firmware information
 
 Request:
+<code>
 [ { bn: 'urn:dev:xbee:0013A20000000000'},{ n:VERS }]
+</code>
 
 Response:
+<code>
 [ { bn: 'urn:dev:xbee:0013A20000000000', bt: 28890433 },
   { n: 'config', vs: '0x10B' },  ( See CONFIG MANAGEMENT below )
   { n: 'repo', vs: 'git@gitlab.comxxxxxxx.git' },
@@ -108,10 +121,13 @@ Response:
   { n: 'XARQ', vs: "1.0" },
   { n: 'RESET', vs: "1.0" },
   { n: 'VERS', vs: "1.0" } ]
+</code>
 
 Signal Strength
+<code>
 [ { bn: 'urn:dev:xbee:0013a20040af7346'},
   {n:'dB', v:15}]
+</code>
 
 
 <b>OTA - Over the Air Programming</b>
