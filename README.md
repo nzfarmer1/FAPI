@@ -1,8 +1,6 @@
 <b>FAPI - Farm Assistant (API)
 
-Firmware Specification
-
-v1.0
+Firmware Specification  (v0.1)
 
 Andrew McClure
 AgSense Ltd.
