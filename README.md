@@ -80,7 +80,7 @@ To query the state of an accuator we use:
   { n: 'D0' } ]    (or leave vb:undefined)
 </pre>
 
-The n: flag correlated to the Service name.  A full API is being developed.  Here are some additional examples:
+The n: flag correlates to the Service name.  A full API is being developed.  Here are some additional examples:
 
 - Voltage sensor from End Node
 <pre>
