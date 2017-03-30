@@ -139,7 +139,7 @@ We provide two modes for updating OTA. Fast and Slow.
 Fast: This temporarily disables our Application Layer providing a fast dedicated byte stream upload  (4-10kbps).
 Slow: This encapsulates 250byte segments within SenML with a simple API for starting, sending, and resetting the device.
 
-Note: Slow is beneficial for performing background updates without affecting operations both from the node itself, or on additional network nodes.
+<i>Note: Slow is beneficial for performing background updates without affecting operations both from the node itself, or on additional network nodes.</i>
 
 
 <b>CONFIGURATION MANAGEMENT</b>
