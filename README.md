@@ -66,7 +66,7 @@ Services that run in our firmware expose Application Layer protocol based on Sen
 
 To conform with a Serial based framework, this protocol has been extended to incorporate SenML/JSON oriented requests (as oppossed to pureley CoAP based)
 
-For example, activate an acctuator we send:
+For example, to activate an acctuator we send:
 
 <pre>
 [ { bn: 'urn:dev:xbee:0013a20040af7346' },
