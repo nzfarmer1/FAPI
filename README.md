@@ -132,7 +132,7 @@ Signal Strength
 
 <b>OTA - Over the Air Programming</b>
 
-Our bootloader supports OTA progamming by checking for a flash image in the 4MBit SPI.
+Our bootloader supports OTA progamming by checking for a flash image in the 4MBit SPI Flash.
 
 We provide two modes for updating OTA. Fast and Slow.
 
