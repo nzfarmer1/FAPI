@@ -53,12 +53,12 @@ Our network stack features the following:
 
 - End node interface is sub classed from Arduino Streams library providing a set of core routines for beginning; reading; writing; checking availability (and ready states), and flushing the communications.
 - On top of these routines are additional methods for specifying BAUD rates, and querying the XBee Modem's state.
-- Subclassed further are wrappers that provide a framework handling packets.  
+- Subclassed further are wrappers that provide a framework for handling packetised data.  
 - Packets can be of arbritary length, and are defined by a simple begin/end byte.  
 - A constrained (buffered) wrapper is also provided that queues packets of a finite size.
 - beginPacked and endPacket routines are provided, and also implied when using simple "print" statements from a wrapper class.
 - The underlying network protocol is an implementation of Selective Repeat ARQ https://en.wikipedia.org/wiki/Selective_Repeat_ARQ with 7-frame windows and a 6 byte header.
-- On the gateway side, a dedicated nodejs process listens to all network traffic and exposes each End Node as a UNIX socket. If data is to be sent in packets, this is handled at the network layer with a flag set via the End Node and Communicated in the network header.  All encapsulation is therefore seamless to the gateway client.
+- On the gateway side, a dedicated nodejs process listens to all network traffic and exposes each End Node as a UNIX socket. If data is to be sent in packets, this is handled at the network layer with a flag set via the End Node and Communicated in the network header. (All encapsulation is therefore seamless to the gateway client.)
 
 <b>APPICATION LAYER (SenML)</b>
 
@@ -136,8 +136,8 @@ Our bootloader supports OTA progamming by checking for a flash image in the 4MBi
 
 We provide two modes for updating OTA. Fast and Slow.
 
-Fast: This temporarily disables our Application Layer providing a fast dedicated byte stream upload  (4-10kbps).
-Slow: This encapsulates 250byte segments within SenML with a simple API for starting, sending, and resetting the device.
+- FAST: This temporarily disables our Application Layer providing a fast dedicated byte stream upload  (4-10kbps).
+- SLOW: This encapsulates 250byte segments within SenML with a simple API for starting, sending, and resetting the device.
 
 <i>Note: Slow is beneficial for performing background updates without affecting operations both from the node itself, or on additional network nodes.</i>
 
