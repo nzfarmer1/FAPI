@@ -98,7 +98,7 @@ The n: flag correlated to the Service name.  A full API is being developed.  Her
 - Camera image
 <pre>
 [ { bn: 'urn:dev:xbee:0013a20040af7346'},
-  {n:'CAM', vd:<Buffer 0x....>}]
+  {n:'CAM', vd:&lt;Buffer 0x....&gt;}]
 </pre>
 
 (note, all SenML data is encoded/decoded via Msgpack http://msgpack.org, providing both type and size metadata)
