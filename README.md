@@ -111,7 +111,7 @@ Request:
 </code>
 
 Response:
-<code>
+<pre>
 [ { bn: 'urn:dev:xbee:0013A20000000000', bt: 28890433 },
   { n: 'config', vs: '0x10B' },  ( See CONFIG MANAGEMENT below )
   { n: 'repo', vs: 'git@gitlab.comxxxxxxx.git' },
@@ -121,7 +121,7 @@ Response:
   { n: 'XARQ', vs: "1.0" },
   { n: 'RESET', vs: "1.0" },
   { n: 'VERS', vs: "1.0" } ]
-</code>
+</pre>
 
 Signal Strength
 <code>
