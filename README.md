@@ -62,7 +62,7 @@ Our network stack features the following:
 
 <b>APPICATION LAYER (SenML)</b>
 
-Services that run in our firmware expose Application Layer protocol based on SenML: https://datatracker.ietf.org/doc/draft-ietf-core-senml/
+Services that run in our firmware expose an Application Layer protocol based on SenML: https://datatracker.ietf.org/doc/draft-ietf-core-senml/
 
 To conform with a Serial based framework, this protocol has been extended to incorporate SenML/JSON oriented requests (as oppossed to pureley CoAP based)
 
