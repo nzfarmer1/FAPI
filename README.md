@@ -146,16 +146,16 @@ Each Service is responsible for checking dependendencies via a static_assert met
 
 Example services:
 
-FAPI_EEPROM_ 0x01
-FAPI_XARQ_   0x02 
-FAPI_SLEEP_  0x04
-FAPI_RSET_   0x08
-FAPI_OTAS_   0x10
-FAPI_BATT_   0x40
-FAPI_SIGNAL_ 0x80
-FAPI_REVS_   0x100
-FAPI_GPS_    0x200
-FAPI_CAM_    0x400
-FAPI_ACC_    0x8000
-FAPI_TANK_   0x1000
-FAPI_SHT1x_  0x200
+- FAPI_EEPROM_ 0x01
+- FAPI_XARQ_   0x02 
+- FAPI_SLEEP_  0x04
+- FAPI_RSET_   0x08
+- FAPI_OTAS_   0x10
+- FAPI_BATT_   0x40
+- FAPI_SIGNAL_ 0x80
+- FAPI_REVS_   0x100
+- FAPI_GPS_    0x200
+- FAPI_CAM_    0x400
+- FAPI_ACC_    0x8000
+- FAPI_TANK_   0x1000
+- FAPI_SHT1x_  0x200
