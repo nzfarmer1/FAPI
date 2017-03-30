@@ -36,12 +36,14 @@ Power management is via our integrated 12v charge circuits and can be from eithe
 <b>I/O Features</b>
 
 - Console output via Digital Ports 14/15 (RX/TX)
-- Uart0 connected to XBee radios / OR FTDI programming
-- UART2 multiplexed 4 ways to provide support for multiple devices
+- UART0 connected to XBee radios / OR FTDI programming
+- UART1 multiplexed 4 ways to provide support for multiple devices
 - 6pin Headers exposed for  Serial programmers
 - Bootloader supports boot from SPI options
 - 4x Analog input
 - SPI
+- 1-Wire
+- Digital Interrupt/Flow Meter
 
 <b>WIRELESS COMMUNICATIONS and DIGIMESH</b>
 
