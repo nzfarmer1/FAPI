@@ -90,7 +90,7 @@ The n: flag correlates to the Service name.  A full API is being developed.  Her
 
 - Positional data in header
 <pre>
-[ { bn: 'urn:dev:xbee:0013a20040af7346', pos:[<lon>,<lat>,<alt>], bt:<ms since midnight> }, {...} ],
+[ { bn: 'urn:dev:xbee:0013a20040af7346', pos:[&lt;lon&gt;,&lt;lat&gt;,&lt;alt&gt;], bt:&lt;ms since midnight&gt; }, {...} ],
 </pre>
 
 <i>(Note: as our End Nodes do not incorporate a RTC, time is synced via the gateway)</i>
@@ -139,7 +139,7 @@ We provide two modes for updating OTA. Fast and Slow.
 - FAST: This temporarily disables our Application Layer providing a fast dedicated byte stream upload  (4-10kbps).
 - SLOW: This encapsulates 250byte segments within SenML with a simple API for starting, sending, and resetting the device.
 
-<i>Note: Slow is beneficial for performing background updates without affecting operations both from the node itself, or on additional network nodes.</i>
+<i>Note: Slow is beneficial for performing background updates without affecting operations either on the node itself, or on other network nodes served by the same gateway.</i>
 
 
 <b>CONFIGURATION MANAGEMENT</b>
@@ -154,7 +154,7 @@ Some services inherit from a Sleep service that provides optional PUB/SUB notifi
 
 (PUB/SUB settings are controlled via SenML using the ps:x tag where 0 means no sleep; and x provides the sleep window in milliseconds)
 
-To enable a service, a configuration DEFINE is passed in the build process; used to include/exclude module. A build script runs the Makefile and checks for changes in parameters. For example, build a version of the firmware with support for a TANK Module, OTAS updates, RESET,  EEPROM and SLEEP we can use:
+To enable a service, a configuration DEFINE is passed to the build process; used to include/exclude module. A build script runs the Makefile and checks for changes in parameters. For example, to build a version of the firmware with support for a TANK Module, OTAS updates, RESET,  EEPROM and SLEEP we can use:
 
 ./build XCONFIG=0x111F XDEBUG=0x1 FAST=0x0.
 
